@@ -18,8 +18,6 @@ int main()
 {
     thread philosophers[NUM_PHILOSOPHERS];
     for (int i = 0; i < NUM_PHILOSOPHERS; i++)
-        chopsticks[i].lock();
-    for (int i = 0; i < NUM_PHILOSOPHERS; i++)
         philosophers[i] = thread(philosopher_thread, i);
     for (int i = 0; i < NUM_PHILOSOPHERS; i++)
         philosophers[i].join();
@@ -36,7 +34,8 @@ void philosopher_thread(int philosopher_id)
         mtx.lock();
         if (num_meals >= MAX_MEALS)
         {
-            cout << "Philosopher " << philosopher_id << " has finished dining." << endl;
+            cout << "Philosopher " << philosopher_id << " has finished dining.\n"
+                 << endl;
             mtx.unlock();
             break;
         }
@@ -46,7 +45,8 @@ void philosopher_thread(int philosopher_id)
         chopsticks[left_chopstick].lock();
         chopsticks[right_chopstick].lock();
 
-        cout << "Philosopher " << philosopher_id << " is eating." << endl;
+        cout << "Philosopher " << philosopher_id << " is eating.\n"
+             << endl;
         this_thread::sleep_for(chrono::milliseconds(100));
 
         chopsticks[left_chopstick].unlock();
@@ -56,7 +56,8 @@ void philosopher_thread(int philosopher_id)
         num_meals++;
         mtx.unlock();
 
-        cout << "Philosopher " << philosopher_id << " is thinking." << endl;
+        cout << "Philosopher " << philosopher_id << " is thinking.\n"
+             << endl;
         this_thread::sleep_for(chrono::milliseconds(100));
     }
 }
