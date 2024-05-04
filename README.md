@@ -1,5 +1,25 @@
 # Operating Systems Practical File
 
+## Index
+
+1. [Experiment 1](#experiment-1)
+2. [Experiment 2](#experiment-2)
+3. [Experiment 3a](#experiment-3a)
+4. [Experiment 3b](#experiment-3b)
+5. [Experiment 3c](#experiment-3c)
+6. [Experiment 3d](#experiment-3d)
+7. [Experiment 4](#experiment-4)
+8. [Experiment 5](#experiment-5)
+9. [Experiment 6a](#experiment-6a)
+10. [Experiment 6b](#experiment-6b)
+11. [Experiment 7a](#experiment-7a)
+12. [Experiment 7b](#experiment-7b)
+13. [Experiment 8](#experiment-8)
+14. [Experiment 9a](#experiment-9a)
+15. [Experiment 9b](#experiment-9b)
+16. [Experiment 9c](#experiment-9c)
+17. [Experiment 9d](#experiment-9d)
+
 ## Experiment 1
 ### Aim
 Write a program to implement process creation and termination for an operating system (fork, wait, signal, exit, etc.).
